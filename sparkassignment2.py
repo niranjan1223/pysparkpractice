@@ -12,4 +12,4 @@ df2 = df.withColumn("equal_time",from_unixtime(col("Issue_Date") / 1000)).withCo
 #3.removing the extra space
 df.withColumn("Country",when(col("Country")=="null" ,"").otherwise(col("Country"))).show()
 #4.removing null values in country column
-df.withColumn("col2",ltrim("Brand")).show()
+df.withColumn("col2",ltrim("Brand")).show()  
